@@ -1,0 +1,56 @@
+<div class="container p-4" style="margin-top:70px;">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card text-center">
+                <div class="card-header">
+                    <h3 class="text-uppercase">ACTUALIZAR PRODUCTO</h3>
+                </div>
+                <div class="card-body">
+                    <form action="/edit/{{producto.id}}" method="post">
+                        <div class="input-group mt-2">
+                            <label for="name" class="input-group-text">Nombre</label>
+                            <input class="form-control" type="text" name="nomprod" id="nomprod" placeholder="Nombre"
+                                value="{{producto.nomprod}}" autofocus required>
+                        </div>
+                        <div class="input-group mt-2">
+                            <label for="description" class="input-group-text">Descripción</label>
+                            <input class="form-control" type="text" name="desprod" id="desprod" placeholder="Descripción"
+                                value="{{producto.desprod}}" required>
+                        </div>
+
+                        <!-- Select para Categoría -->
+                        <div class="input-group mt-2">
+                            <label for="category" class="input-group-text">Categoría</label>
+                            <select class="form-control" name="catprod" id="catprod" required>
+                                <option value="" disabled>Selecciona una categoría</option>
+                                <option value="electronica">Electrónica</option>
+                                <option value="ropa">Ropa</option>
+                                <option value="audifonos">Audífonos</option>
+                                <option value="computadoras">Computadoras</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group mt-2">
+                            <label for="stock" class="input-group-text">Cantidad</label>
+                            <input class="form-control" type="text" name="cantprod" id="cantprod" placeholder="Cantidad"
+                                value="{{producto.cantprod}}" required>
+                        </div>
+
+                        <div class="input-group mt-2">
+                            <label for="price" class="input-group-text">Precio</label>
+                            <input class="form-control" type="text" name="precprod" id="precprod" placeholder="Precio"
+                                value="{{producto.precprod}}" required>
+                        </div>
+
+                        <div class="form-group mt-4 d-grid gap-2">
+                            <button class="btn btn-success">Actualizar</button>
+                            <button class="btn btn-danger">
+                                <a class="nav-link link-light" aria-current="page" href="/products">Cancelar</a>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
